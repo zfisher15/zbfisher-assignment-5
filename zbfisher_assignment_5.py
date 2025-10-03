@@ -24,6 +24,23 @@ if step_count != 0:
 else:
     print("Steps:", step_count)
 print()
+#Step 2
+print("=== Challenge 2: Prime Number Checker ===")
+user_num = int(input("Enter a number: "))
+print(f"Testing divisors from 2 to {user_num - 1}...")
+
+if user_num < 2:
+    print({user_num}, "is not prime")
+elif user_num == 2:
+    print(user_num, "is prime!")
+else:
+    for number in range(2, user_num):
+        if user_num % number == 0:
+            print(f"{user_num} is not prime (divisible by {number})")
+            break
+    else:
+        print(user_num, "is prime!")
+print()
 
 
 
